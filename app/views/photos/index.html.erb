@@ -1,0 +1,6 @@
+<% @photos.each do |p| %>
+<%= link_to image_tag(p.picture), controller: "photos", action:"show", id: p.id %>
+<div style="height:20px"></div>
+<% end %>
+<div style="height:10px"></div>
+<%= link_to "Upload image", '/uploadImage' %>

@@ -1,0 +1,13 @@
+<%= link_to "Home", '/home' %>
+<br>
+<%= link_to "Delete photo", contoller: "photos", action: "delete", id: @photo.id %>
+<br>
+<%= image_tag(@photo.picture) %>
+<br>
+<% @comments.each do |c| %>
+<br>
+<%= c.text %>
+<br>
+<% end %>
+<br>
+<%= link_to "Add comment", controller: "comments", action: "new", id: @photo.id %>
